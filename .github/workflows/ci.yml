@@ -67,7 +67,21 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Start application in background
+        run: |
+          npm start &
+          sleep 10
+          curl -f http://localhost:3000 || exit 1
+          
       - name: Setup k6
         run: |
           sudo gpg -k
@@ -78,3 +92,4 @@ jobs:
       
       - name: Run k6 smoke test
         run: k6 run loadtest/script.js
+
