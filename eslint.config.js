@@ -15,6 +15,11 @@ module.exports = [
       node: true, 
       jest: true 
     },
+    globals: {
+      '__ENV': 'readonly',
+      '__VU': 'readonly',
+      '__ITER': 'readonly'
+    },
     rules: {
       "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
       "no-console": "off",
