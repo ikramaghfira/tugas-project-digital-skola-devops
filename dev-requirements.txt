@@ -1,4 +1,20 @@
-pytest==8.3.2
-httpx==0.27.2
-bandit==1.7.9
+# Testing dependencies - secure versions
+pytest==8.3.4
+pytest-cov==6.0.0
+pytest-asyncio==0.24.0
+pytest-mock==3.14.0
+httpx==0.28.1
+
+# Code quality & security tools
+bandit==1.8.0
 pip-audit==2.7.3
+
+# Code formatting & linting
+black==24.10.0
+flake8==7.1.1
+isort==5.13.2
+mypy==1.13.0
+
+# Development utilities
+pre-commit==4.0.1
+ipython==8.31.0

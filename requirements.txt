@@ -1,2 +1,26 @@
-fastapi==0.115.0
-uvicorn==0.30.6
+# Core FastAPI dependencies
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.5
+pydantic-settings==2.7.1
+
+# Database
+sqlalchemy==2.0.36
+alembic==1.14.0
+
+# Security & Authentication
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.4.0
+python-multipart==0.0.22
+bcrypt==4.2.1
+
+# HTTP Client
+httpx==0.28.1
+requests==2.32.4
+
+# Utilities
+python-dotenv==1.0.1
+email-validator==2.2.0
+
+# ASGI server
+gunicorn==23.0.0
