@@ -2,9 +2,9 @@ name: DevSecOps CI/CD Pipeline
 
 on:
   push:
-    branches: [ main, master, develop ]
+    branches: [ main, master, develop, sesi30-devsecops ]
   pull_request:
-    branches: [ main, master, develop ]
+    branches: [ main, master, develop, sesi30-devsecops ]
 
 env:
   DOCKER_IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/notes-app
